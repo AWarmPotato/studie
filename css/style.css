@@ -113,6 +113,16 @@ nav button{
     font-size: clamp(12px, 2.5vw, 20px);
 }
 
+#menu-knop {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 3em;
+    line-height: 1;
+    font-size: clamp(12px, 2.5vw, 20px);
+}
+
 .Navbar-spacer {
     flex: 1;
     display: flex;
@@ -140,6 +150,11 @@ button {
 .links button{
     flex-grow: 1;
     flex-basis: 0;
+}
+
+#begroeting {
+  text-align: center;
+  font-size: clamp(11px, 3vw, 26px);
 }
 
 .container {
@@ -518,6 +533,28 @@ form{
 
 
 @media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    #menu-knop {
+        display: block;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3 ease;
+    }
+
+    .links.open {
+        max-height: 300px;
+    }
+
     .links button {
         flex: 0 1 auto;
     }
@@ -536,10 +573,6 @@ form{
 }
 
 @media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-    }
-
     .Titel {
         width: 100%;
     }

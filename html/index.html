@@ -9,7 +9,7 @@
 <body>
 <nav>
     <div class="logo">ARSENI.</div>
-    <div class="links">
+    <div class="links" id="menu">
         <button><a href="index.html">Home</a></button>
         <button><a href="about-me.html">About Me</a></button>
         <button><a href="projecten.html">Projecten</a></button>
@@ -18,8 +18,13 @@
 
     <div class="Navbar-spacer">
         <button id="thema-knop">🌙</button>
+        <button id="menu-knop" aria-label="Menu openen">☰</button>
     </div>
 </nav>
+
+<header>
+    <h1 id="begroeting"></h1>
+</header>
 
 <main class="container">
     <section class="main1">
@@ -63,6 +68,7 @@
 </footer>   
 
 <script src="../JavaScript/cookies.js"></script>
+<script src="../JavaScript/begroeting.js"></script>
 <script src="../JavaScript/script.js"></script>
 </body>
 </html>

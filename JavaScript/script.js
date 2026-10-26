@@ -26,6 +26,13 @@ knop.addEventListener("click", function () {
     updateKnop();
 });
 
+const menuKnop = document.getElementById("menu-knop");
+const menu = document.getElementById("menu");
+
+menuKnop.addEventListener("click", function () {
+    menu.classList.toggle("open");
+});
+
 
 const plaatjes = document.querySelectorAll("img");
 
@@ -42,3 +49,4 @@ navKnoppen.forEach(function (knop) {
         console.log("De gebruiker klikt op: " + knop.textContent);
     });
 });
+
