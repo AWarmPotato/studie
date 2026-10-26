@@ -3,8 +3,23 @@
 }
 
 :root {
-    --achtergrondkleur: #191927;
+    --achtergrond: #191927;
+    --kaart: #29293a;
+    --tekst: #ffffff;
+    --rand: #000000;
+    --accent: #8E72EE;
+    --accent-hover: #A28CFC;
+    --cyan: #00acd7;
 }
+
+body.light {
+    --achtergrond: #f2f2f7;
+    --kaart: #ffffff;
+    --tekst: #1a1a2e;
+    --rand: #d0d0dc;
+    --cyan: #007a99;
+}
+
 
 html,
 body {
@@ -13,7 +28,9 @@ body {
 }
 
 body {
-    background-color: var(--achtergrondkleur);
+    background-color: var(--achtergrond);
+    color: var(--tekst);
+    transition: background-color 0.3s, color 0.3s;
     font-family: system-ui, sans-serif;
     min-height: 100vh;
     display: flex;
@@ -21,7 +38,7 @@ body {
 }
 
 .BoldText{
-    color: #00acd7;
+    color: var(--cyan);
     font-weight: 700;
 }
 
@@ -30,15 +47,15 @@ body {
 }
 
 p {
-    color: white;
+    color: var(--tekst);
 }
 
 .CyanText {
-    color: #00acd7;
+    color: var(--cyan);
 }
 
 .VioletText {
-    color: #8E72EE;
+    color: var(--accent);
 }
 
 a {
@@ -47,15 +64,18 @@ a {
 }
 
 nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     margin-bottom: 10px;
-    background-color: #29293A;
+    background-color: var(--kaart);
     min-height: 70px;   
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--rand);
     width: 100%;
     box-sizing: border-box;
 }
@@ -63,10 +83,10 @@ nav{
 .logo {
     flex: 1;
     text-align: left;
-    margin: clamp(0.2, 1vw, 1em);
+    margin: clamp(0.2em, 1vw, 1em);
     font-size: clamp(11px, 3vw, 26px);
     font-weight: 800;
-    color: white;
+    color: var(--tekst);
 }
 
 .links {
@@ -83,17 +103,25 @@ nav button{
     white-space: nowrap;
 }
 
+#thema-knop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 3em;
+    line-height: 1;
+    font-size: clamp(12px, 2.5vw, 20px);
+}
+
 .Navbar-spacer {
-    visibility: hidden;
     flex: 1;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
     margin: clamp(0.2em, 1vw, 1em);
-    font-size: clamp(11px, 3vw, 26px);
-    font-weight: 800;
 }
 
 button {
-    background-color: #8E72EE;
+    background-color: var(--accent);
     color: white;
     height: 2em;
     padding: 10px 20px;
@@ -104,7 +132,7 @@ button {
     font-size: 16px; 
 
     &:hover {
-        background-color: #A28CFC;
+        background-color: var(--accent-hover);
         cursor: pointer;
     }
 }
@@ -140,10 +168,9 @@ button {
     overflow-wrap: break-word;
     min-height: 20em;
     padding: clamp(10px, 2vw, 24px);
-    background-color: #29293A;
-    border: 1px solid black;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
     border-radius: 10px;
-    color: black;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -152,7 +179,7 @@ button {
 
 .heading:hover {
     transform: translateY(-4px);
-    border-color: #8b6cf0;
+    border-color: var(--accent-hover);
 }
 
 .heading h1 {
@@ -180,10 +207,10 @@ button {
     min-width: 0;
     min-height: clamp(130px, 22vw, 240px);
     padding: clamp(5px, 1.5vw, 24px);
-    background-color: #29293A;
-    border: 1px solid black;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
     border-radius: 10px;
-    color: black;
+    color: var(--tekst);
     text-align: center;
     align-items: center;
     box-sizing: border-box;
@@ -191,7 +218,7 @@ button {
 
 .Titel:hover {
     transform: translateY(-4px);
-    border-color: #8b6cf0;
+    border-color: var(--accent-hover);
 }
 
 .Titel img {
@@ -216,9 +243,9 @@ footer {
     gap: 1rem;
     padding: 1rem, 1.5rem;
     margin-top: auto;
-    background-color: #29293A;
-    color: white;
-    border: 1px solid black;
+    background-color: var(--kaart);
+    color: var(--tekst);
+    border: 1px solid var(--rand);
 }
 
 .footer-links {
@@ -277,10 +304,10 @@ footer p{
     box-sizing: border-box;
     height: auto;
     padding: clamp(10px, 2vw, 24px);
-    background-color: #29293A;
-    border: 1px solid black;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
     border-radius: 10px;
-    color: black;
+    color: var(--tekst);
     margin-bottom: 10px;
     margin-left: 3em;
 }
@@ -309,7 +336,7 @@ h1, h2 {
     margin: 1em;
     display: flex;
     justify-content: left;
-    border-bottom: 1px solid #8E72EE;
+    border-bottom: 1px solid var(--accent);
 }
 
 table, th, td {
@@ -317,8 +344,8 @@ table, th, td {
     margin-right: auto;
     text-align: center;
     width: 50%;
-    border:1px solid #8E72EE;
-    color: white;
+    border:1px solid var(--accent);
+    color: var(--tekst);
 }
 
 th, td{
@@ -332,22 +359,22 @@ th, td{
     gap: 10px;
 }
 
-.box1, .box2, .box3{
+.box{
     display: flex;
     text-align: center;
     flex-direction: column;
     flex: 1;
     max-width: 25em;
     height: 15em;
-    background-color: #29293A;
-    border: 1px solid black;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
     border-radius: 10px;
-    color: black;
+    color: var(--tekst);
     margin-bottom: 10px;
 
     &:hover {
         transform: translateY(-4px);
-        border-color: #8b6cf0;
+        border-color: var(--accent-hover);
     }
 }
 
@@ -358,26 +385,6 @@ th, td{
     flex-direction: row;
     justify-content: space-evenly;
     gap: 10px;
-}
-
-.box4, .box5, .box6{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    flex: 1;
-    max-width: 25em;
-    height: 15em;
-    background-color: #29293A;
-    border: 1px solid black;
-    border-radius: 10px;
-    color: black;
-    margin-bottom: 10px;
-
-    
-    &:hover {
-        transform: translateY(-4px);
-        border-color: #8b6cf0;
-    }
 }
 
 .main3 {
@@ -397,10 +404,10 @@ th, td{
     padding: clamp(8px, 2vw, 24px);
     box-sizing: border-box;
     align-items: stretch;
-    background-color: #29293A;
-    border: 1px solid black;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
     border-radius: 10px;
-    color: black;
+    color: var(--tekst);
     text-align: center;
 }
 
@@ -438,15 +445,15 @@ th, td{
     margin: 10px auto;
     padding: clamp(10px, 2vw, 30px);
     box-sizing: border-box;
-    background-color: #29293A;
-    border: 1px solid black;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
     border-radius: 10px;
-    color: black;
+    color: var(--tekst);
 
     
     &:hover {
         transform: translateY(-4px);
-        border-color: #8b6cf0;
+        border-color: var(--accent-hover);
     }
 
     > form{
@@ -506,7 +513,7 @@ th, td{
 
 
 form{
-    color: white;
+    color: var(--tekst);
 }
 
 
