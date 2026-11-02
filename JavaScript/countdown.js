@@ -7,7 +7,7 @@ function updateCountDown() {
     const verschil = inleverdatum - nu;
 
     if (verschil <= 0) {
-        tekstElement.textContent = "De inlever datum is berijkt!"
+        tekstElement.textContent = "het inlever datum is berijkt!"
         clearInterval(timer);
         return;
     }
