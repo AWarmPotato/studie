@@ -4,7 +4,7 @@ const tekstElement = document.getElementById("countdown-text");
 
 function updateCountDown() {
     const nu = new Date();
-    const verschil = inleverdatum - nu;
+    const verschil = inleverdatum - nu; //berekend milsecondes tot datum 
 
     if (verschil <= 0) {
         tekstElement.textContent = "het inlever datum is berijkt!"

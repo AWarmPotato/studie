@@ -280,6 +280,7 @@ footer {
 
 .footer-copyright {
     margin: 0;
+    padding-right: 5px;
 }
 
 footer p{
@@ -449,8 +450,7 @@ th, td{
 
 
 .WebsiteImg{
-    height: 25em;
-    width: 30em;
+    max-height: 25em;
     margin: 10px;
     text-align: center;
     align-items: center;
@@ -585,6 +585,8 @@ form{
 @media (max-width: 480px) {
     .Titel {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     .Wiebenik {
