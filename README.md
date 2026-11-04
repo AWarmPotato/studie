@@ -1,6 +1,15 @@
 # studie
 This is my first portfolio
 
+# Feedback van een klasgenoot(sem)
+
+**Layout/responsive desing verbeteren**
+
+- sommige boxes zien er raar uit in de telefoon layout zoals texten die slecht passen
+- maak de afbeeldingen op de projecten pagina iets kleiner zo zou het er meer overzichtelijk uitzien
+- de copyright op de footer zit heel erg naar rechts 
+
+
 # Reflectie op mijn portfolio
 
 Tijdens het maken van mijn portfolio heb ik gewerkt met HTML, CSS en JavaScript. Over het algemeen ben ik best tevreden met het resultaat en hoe ik het project heb aangepakt.
